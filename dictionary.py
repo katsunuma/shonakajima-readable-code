@@ -1,10 +1,5 @@
 import argparse
 
-## コマンドライン引数の設定
-parser = argparse.ArgumentParser()
-parser.add_argument("path", default="dictionary-data.txt", help="単語ファイル名")
-args = parser.parse_args( )
-
 def dictionary(path):
     
     ##データの読み込み
@@ -18,4 +13,9 @@ def dictionary(path):
     for i in range(length):
         print("{}:{}".format(i+1,text[i]))
 
-dictionary(args.path)
+## コマンドライン引数の設定
+if __name__=='__main__':
+    parser = argparse.ArgumentParser()
+    parser.add_argument("path", default="dictionary-data.txt", help="単語ファイル名")
+    args = parser.parse_args( )
+    dictionary(args.path)
