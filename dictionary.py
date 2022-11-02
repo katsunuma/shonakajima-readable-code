@@ -15,7 +15,7 @@ def dictionary(path):
 
 ## コマンドライン引数の設定
 if __name__=='__main__':
-    parser = argparse.ArgumentParser()
+    parser = argparse.ArgumentParser(description='テキストファイルの単語をID付きで出力するプログラム')
     parser.add_argument("path", default="dictionary-data.txt", help="単語ファイル名")
     args = parser.parse_args( )
     dictionary(args.path)
