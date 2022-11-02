@@ -13,6 +13,7 @@
 - dictionary-data.txt
     - 上記の名前でtxtファイルを自作してください。
     - 中身は「上手」「一時」「市場」という単語を改行して記載してください。
+    - ファイル内の行数が単語のIDとして認識されます。
 
 ## 実行手順
 
@@ -24,4 +25,9 @@
 
     - デスクトップに保存した場合は「cd desktop」と入力する。
 
-(3)「python dictionary.py dictionary-data.txt」と入力してプログラムを実行する。
+- (3)
+     e.g.「python dictionary.py dictionary-data.txt 1 」と入力してプログラムを実行する。
+
+     第一引数：データファイル
+     第二引数：表示したい単語のidを指定
+        idを指定しない場合は0を渡す
