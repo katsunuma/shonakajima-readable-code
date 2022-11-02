@@ -1,8 +1,8 @@
 import argparse
 
 ## コマンドライン引数の設定
-parser = argparse.ArgumentParser( )
-parser.add_argument("path")
+parser = argparse.ArgumentParser()
+parser.add_argument("path", default="dictionary-data.txt", help="単語ファイル名")
 args = parser.parse_args( )
 
 def dictionary(path):
